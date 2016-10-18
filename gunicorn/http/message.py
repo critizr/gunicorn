@@ -76,8 +76,8 @@ class Message(object):
                 raise InvalidHeader(curr.strip())
             name, value = curr.split(":", 1)
             name = name.rstrip(" \t").upper()
-            if HEADER_RE.search(name):
-                raise InvalidHeaderName(name)
+            # if HEADER_RE.search(name):
+                # raise InvalidHeaderName(name)
 
             name, value = name.strip(), [value.lstrip()]
 
